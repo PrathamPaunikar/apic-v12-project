@@ -1,0 +1,13 @@
+kind: Product
+apiVersion: api.ibm.com/v1
+metadata:
+  name: dummyProduct
+  namespace: APIC-Project
+  version: '1.0'
+  tags: []
+  description: ''
+spec:
+  apis:
+    - $ref: APIC-Project:dummyAPI:1.0.0
+  plans:
+    - $ref: APIC-Project:dummyPlan:1.0

@@ -1,0 +1,29 @@
+kind: DataPowerAssembly
+apiVersion: api.ibm.com/v1
+metadata:
+  name: assembly-dummyAPI
+  namespace: APIC-Project
+  version: '1.0'
+  tags: []
+spec:
+  x-ibm-configuration:
+    properties:
+      target-url:
+        value: http://example.com/operation-name
+        description: The URL of the target service
+        encoded: false
+    cors:
+      enabled: true
+    gateway: datapower-api-gateway
+    type: rest
+    phase: realized
+    enforced: true
+    testable: true
+    assembly:
+      execute:
+        - gatewayscript:
+            title: ''
+    activity-log:
+      enabled: true
+      success-content: activity
+      error-content: payload

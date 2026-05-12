@@ -1,0 +1,13 @@
+kind: Properties
+apiVersion: api.ibm.com/v1
+metadata:
+  name: properties-dummyAPI
+  namespace: APIC-Project
+  version: '1.0'
+  tags: []
+  description: ''
+spec:
+  target-url:
+    value: http://example.com/operation-name
+    description: The URL of the target service
+    encoded: false

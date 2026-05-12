@@ -1,0 +1,20 @@
+kind: Plan
+apiVersion: api.ibm.com/v1
+metadata:
+  name: dummyPlan
+  namespace: APIC-Project
+  version: '1.0'
+  tags: []
+  description: ''
+spec:
+  qos:
+    withQuota:
+      unlimited: {}
+  extensions:
+    dp-gateway:
+      apiVersion: api.ibm.com/v1
+      spec:
+        withRateLimit:
+          - name: dummyRateLimit
+            maxRequest: 10
+            interval: 1m
