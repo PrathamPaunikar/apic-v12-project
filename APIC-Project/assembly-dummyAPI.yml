@@ -22,7 +22,12 @@ spec:
     assembly:
       execute:
         - gatewayscript:
-            title: ''
+            version: 2.0.0
+            title: gatewayscript
+            source: |-
+              var msg = "Hi, this is a dummy message!"
+
+              context.set('message.body', msg);
     activity-log:
       enabled: true
       success-content: activity
