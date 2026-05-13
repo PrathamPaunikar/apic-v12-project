@@ -1,0 +1,17 @@
+kind: API
+apiVersion: api.ibm.com/v1
+metadata:
+  name: dummyAPI
+  namespace: APIC-Project
+  version: 1.0.0
+  tags: []
+  type: REST
+spec:
+  api-spec:
+    $path: ./dummyAPI-spec.yml
+  cors:
+    $ref: APIC-Project:cors-dummyAPI:1.0
+  properties:
+    $ref: APIC-Project:properties-dummyAPI:1.0
+  policy-sequence:
+    - $ref: APIC-Project:assembly-dummyAPI:1.0
