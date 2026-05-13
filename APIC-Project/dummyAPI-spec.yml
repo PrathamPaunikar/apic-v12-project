@@ -43,14 +43,6 @@ paths:
             application/json:
               schema:
                 type: string
-    post:
-      responses:
-        '200':
-          description: success
-          content:
-            application/json:
-              schema:
-                type: string
 components:
   securitySchemes:
     clientID:
